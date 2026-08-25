@@ -1,5 +1,5 @@
 {
-  "name": "sites-project",
+  "name": "iron-nest-operator-manual",
   "version": "0.1.0",
   "private": true,
   "engines": {
@@ -8,6 +8,7 @@
   "scripts": {
     "dev": "vinext dev",
     "build": "vinext build",
+    "deploy": "pnpm build && wrangler deploy",
     "start": "vinext start",
     "lint": "eslint . --ignore-pattern dist --ignore-pattern .next"
   },

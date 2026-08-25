@@ -53,6 +53,7 @@ export default defineConfig(async () => {
       vinext(),
       sites(),
       cloudflare({
+        configPath: './wrangler.jsonc',
         viteEnvironment: { name: 'rsc', childEnvironments: ['ssr'] },
         config: localBindingConfig,
       }),

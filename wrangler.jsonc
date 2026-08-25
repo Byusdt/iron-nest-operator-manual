@@ -1,0 +1,19 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "iron-nest-operator-manual",
+  "compatibility_date": "2026-05-15",
+  "compatibility_flags": ["nodejs_compat"],
+  "main": "vinext/server/app-router-entry",
+  "routes": [
+    {
+      "pattern": "ironnest.guide",
+      "custom_domain": true
+    }
+  ],
+  "vars": {
+    "NEXT_PUBLIC_SITE_URL": "https://ironnest.guide"
+  },
+  "observability": {
+    "enabled": true
+  }
+}

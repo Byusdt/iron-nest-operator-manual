@@ -20,18 +20,20 @@ pnpm build
 
 ## Production setup
 
-The project supports the existing Cloudflare/Vinext build and a native Next.js
-build on Vercel. Before the production deployment, configure:
+The production site is deployed to Cloudflare Workers at
+`https://ironnest.guide`. Google Analytics is enabled when this variable is
+configured for the production build:
 
 ```bash
-NEXT_PUBLIC_SITE_URL=https://your-domain.example
 NEXT_PUBLIC_GA_ID=G-XXXXXXXXXX
 ```
 
-`NEXT_PUBLIC_SITE_URL` is used for canonical URLs, Open Graph metadata,
-`robots.txt`, and `sitemap.xml`. On Vercel it can be omitted until a custom
-domain is attached because the production deployment URL is detected
-automatically.
+The Worker name, custom domain, canonical site URL, and compatibility settings
+are versioned in `wrangler.jsonc`. Build and deploy with:
+
+```bash
+pnpm deploy
+```
 
 ## Source policy
 
